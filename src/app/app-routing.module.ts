@@ -10,7 +10,7 @@ import { MyListingsPageComponent } from './my-listings-page/my-listings-page.com
 const routes: Routes = [
   {path: "",redirectTo:"/listings", pathMatch:"full"},
   {path: "listings", component: ListingsPageComponent, pathMatch: "full"},
-  {path: "lisitings/:id", component: ListingDetailPageComponent},
+  {path: "listings/:id", component: ListingDetailPageComponent},
   {path: "contact/:id", component: ContactPageComponent},
   {path: "edit-listing/:id", component: EditListingPageComponent},
   {path: "my-listing", component:MyListingsPageComponent},

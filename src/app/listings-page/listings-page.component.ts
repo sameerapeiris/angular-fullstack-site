@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Listing } from '../types';
+import { fakeListing } from '../fake-data';
 
 @Component({
   selector: 'app-listings-page',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './listings-page.component.scss'
 })
 export class ListingsPageComponent {
+  public listings: Listing[] = []
 
+  constructor(){}
+  ngOnInit(){
+    this.listings = fakeListing;
+  }
 }
