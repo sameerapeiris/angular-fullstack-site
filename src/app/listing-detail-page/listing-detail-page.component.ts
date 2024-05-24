@@ -11,10 +11,10 @@ import { fakeListing } from '../fake-data';
 export class ListingDetailPageComponent {
   public listing: Listing | undefined | null;
 
-  constructor(private router: ActivatedRoute) {}
+  constructor(private rout: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const id = this.router.snapshot.paramMap.get('id');
+    const id = this.rout.snapshot.paramMap.get('id');
     this.listing = fakeListing.find((listing) => listing.id === id);
   }
 }

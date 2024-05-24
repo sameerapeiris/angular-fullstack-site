@@ -2,5 +2,5 @@
     <a routerLink="/listings/{{listing.id}}">
     <h3>{{listing.name}}</h3>
     </a>
-    <p>First Name: {{listing.name.split(" ")[0]}}</p>
+    <p>First Name: {{listing.name && listing.name.split(" ")[0] }}</p>
 </div>

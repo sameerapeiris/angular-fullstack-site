@@ -1,7 +1,7 @@
 export interface Listing {
-    id: string,
-    name: string, 
-    description: string,
-    price: number
+    id: string | null ,
+    name: string | undefined , 
+    description: string  | undefined,
+    price: number | undefined
 
 }
