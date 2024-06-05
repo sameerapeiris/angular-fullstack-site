@@ -44,13 +44,19 @@ export class ListingsService {
     return this.http.delete<Listing>(`${this.apiUrl}/listings/${id}`);
   }
 
-
-
   createListing(name: string | undefined, description: string | undefined, price: number | undefined): Observable<Listing> {
     return this.http.post<Listing>(
       `${this.apiUrl}/listings`,
       { name, description, price },
       httpOptions,
     );
+  }
+
+  editListing(id: any, name: string | undefined, description: string | undefined, price: number | undefined): Observable<Listing>{
+    return this.http.post<Listing>(
+      `${this.apiUrl}/listings/${id}`,
+      { name, description, price },
+      httpOptions,
+    )
   }
 }
